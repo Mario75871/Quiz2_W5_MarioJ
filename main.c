@@ -10,7 +10,7 @@ int main() {
 	printf("\nSoal No 2 : ");   
     insertLast(&list, 11);       
     printf("\nSoal No 3 : ");
-	insertAfter(&list, 9, 7);
+	insertAfter(&list, 2, 7);
 	printf("\nSoal No 4 : ");    
     insertFirst(&list, 5);
 	printf("\nSoal No 5 : ");       
@@ -24,9 +24,10 @@ int main() {
 	printf("\nSoal No 8 : ");   
     deleteFirst(&list);      
 
-    printf("\nMenghapus semua bilangan ganjil:\n");
-    printf("\nSoal No 9 : ");
-	deleteSemuaGanjil(&list);    
+    printf("\nMenghapus semua bilangan :\n");
+    printf("\nSoal No 9 : ");   
+	
+	deleteAll(&list);
 
     return 0;
 }

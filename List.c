@@ -136,31 +136,14 @@ void deleteValue(LinkedList *list, ElementType value) {
     }
 }
 
-// Menghapus semua elemen ganjil
-void deleteSemuaGanjil(LinkedList *list) {
-    if (isListEmpty(*list)) {
-        printf("ERROR: List kosong!\n");
-        return;
+
+void deleteAll(LinkedList *list) {
+    NodePtr temp;
+    while (list->head) {
+        temp = list->head;
+        list->head = list->head->next;
+        free(temp);
     }
-
-    NodePtr temp = list->head, prev = NULL, target;
-
-    while (temp != NULL) {
-        if (temp->data % 2 != 0) {
-            target = temp;
-            if (prev == NULL) {
-                list->head = temp->next;
-            } else {
-                prev->next = temp->next;
-            }
-            temp = temp->next;
-            free(target);
-        } else {
-            prev = temp;
-            temp = temp->next;
-        }
-    }
-
     printList(*list);
 }
 
