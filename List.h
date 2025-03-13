@@ -36,7 +36,7 @@ void insertAfter(LinkedList *list, ElementType value, ElementType afterValue);
 void deleteFirst(LinkedList *list);
 void deleteLast(LinkedList *list);
 void deleteValue(LinkedList *list, ElementType value);
-void deleteSemuaGanjil(LinkedList *list);
+void deleteAll(LinkedList *list);
 
 // Utility
 void printList(LinkedList list);
